@@ -9,11 +9,11 @@ public class SaveToFile {
 
 
     public void saveToFile(String fileName, Human data) {
-        try (FileWriter file = new FileWriter(fileName)){
-            file.write(data.toString());
+        try (FileWriter file = new FileWriter(fileName, true)){
+            file.write(data.toString()+System.lineSeparator());
 
         } catch (IOException e){
-            System.out.println(e);
+            System.err.println(e.getMessage());
         }
 
     }

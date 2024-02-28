@@ -18,6 +18,16 @@ public class Contact implements Human{
         this.phoneNumber = phoneNumber;
     }
 
+    public Contact(String[] rawData){
+
+        this.name = rawData[1];
+        this.surename = rawData[2];
+        this.lastname = rawData[0];
+        this.birthday = rawData[3];
+        this.gender = rawData[5];
+        this.phoneNumber = rawData[4];
+    }
+
     public Contact() {
         name = "Ivan";
         surename = "Ivanovich";
